@@ -101,6 +101,7 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
 >     - 如果point1->val< 9令piont2 = point1
 >     - 如果point1>9，对point2到point1的节点加1，模10
 >
+
 >如果head大于10需要先生成一个节点。point1->val< 9的判断成功的次数有点多啊，不知道有没有优化的方法。
 
 ```c++
@@ -157,4 +158,3 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     return head->next;
 }
 ```
-
