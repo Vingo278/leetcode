@@ -38,7 +38,7 @@ int lengthOfLongestSubstring(string s) {
     longest = len > longest ? len : longest;
   }
   return longest;
-
+}
 ```
 
 

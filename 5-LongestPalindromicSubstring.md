@@ -159,3 +159,8 @@ string longestPalindrome(string s) {
 }
 ```
 
+
+
+### 引用
+
+[LeetCode:Longest Palindromic Substring 最长回文子串](http://www.cnblogs.com/TenosDoIt/p/3675788.html)
