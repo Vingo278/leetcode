@@ -142,13 +142,12 @@ string longestPalindrome(string s) {
   str.push_back('~');
   int mx = 0;
   int id = 0;
-  vector<int> p(str.size(), 0);
+  vector<int> p(str.size() - 1, 0);
   for (int i = 0; i != str.size() - 1; ++i) {
-    if (i < mx) {
+    if (i < mx)
       p[i] = mx - i < p[2 * id - i] ? mx - i : p[2 * id - i];
-    } else {
+    else
       p[i] = 1;
-    }
     //不分情况，而是直接进行扩展，不能扩展的会跳过
     while (str[i + p[i]] == str[i - p[i]]) ++p[i];
     if (i + p[i] > mx) {
@@ -158,7 +157,7 @@ string longestPalindrome(string s) {
   }
   int index = 0;
   int len = 0;
-  for (int i = 1; i != str.size(); ++i) {
+  for (int i = 1; i != p.size(); ++i) {
     if (p[i] > len) {
       len = p[i];
       index = i;
